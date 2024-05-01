@@ -14,14 +14,16 @@ public class PagoEfectivo implements Pago {
 	}
 	
 	
-
+	/*
 	public PagoEfectivo(double montoPagado, LocalDate fechaPago) {
 		super();
 		this.montoPagado = montoPagado;
 		this.fechaPago = fechaPago;
 	}
 	
-
+	 */
+	
+	
 	public double getMontoPagado() {
 		return montoPagado;
 	}
@@ -49,14 +51,20 @@ public class PagoEfectivo implements Pago {
 
 
 	@Override
-	public void realizarPago(Double monto) {
+	public void realizarPago(double monto) {
 		// TODO Auto-generated method stub
+		
+		montoPagado = monto - (monto*0.10);
 
 	}
 
 	@Override
 	public void imprimirRecibo() {
 		// TODO Auto-generated method stub
+		
+		System.out.println("fecha de pago: "+ fechaPago);
+		System.out.println("Monto pagado: $ "+montoPagado);
+		System.out.println("");
 
 	}
 
