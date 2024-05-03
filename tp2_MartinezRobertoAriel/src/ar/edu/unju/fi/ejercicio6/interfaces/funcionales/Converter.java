@@ -7,7 +7,7 @@ public interface Converter<T, T1> {
 	T1 convert(T t);
 	
 	
-	static <T> boolean inNotNull(T t) {
+	static <T> boolean isNotNull(T t) {
 		return t != null;
 	}
 	
